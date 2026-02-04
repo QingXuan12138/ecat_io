@@ -1,0 +1,54 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <Exceptions/>
+ </Breakpoints>
+ <ExecutionProfileWindow/>
+ <FrameBuffer/>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never"/>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="17" useTextEdit="1" path="../../../port/hpm_ecat_e2p_emulation.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="23" y="29" useTextEdit="1" path="../../../port/hpm_ecat_hw.c" left="0" top="13" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="45" y="23" useTextEdit="1" path="../../../port/hpm_ecat_phy.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="985" useTextEdit="1" path="../../../../../boards/hpm5e00evk/board.c" left="0" top="940" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="46" y="594" useTextEdit="1" path="../../../../../boards/hpm5e00evk/pinmux.c" left="0" selected="1" top="549" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditRight" x="0" y="0" useTextEdit="1" path="../../../port/hpm_ecat_e2p_emulation.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditRight" x="41" y="18" useTextEdit="1" path="../../../port/hpm_ecat_phy.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditRight" x="19" y="72" useTextEdit="1" path="../../../port/hpm_ecat_hw.h" left="0" top="59" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditRight" x="0" y="754" useTextEdit="1" path="../../../../../boards/hpm5e00evk/board.h" left="0" top="712" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditRight" x="17" y="58" useTextEdit="1" path="../../../../../boards/hpm5e00evk/pinmux.h" left="0" top="44" codecName="Default"/>
+ </Files>
+ <EMStudioWindow activeProject="ecat_io - hpm5e00evk" fileDialogDefaultFilter="*.c" autoConnectTarget="GDB Server" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="1343"/>
+</session>
