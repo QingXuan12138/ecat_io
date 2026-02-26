@@ -20,20 +20,6 @@ int main(void)
 {
     hpm_stat_t stat;
     board_init();
-
-    /* ---------------- 最简 485 发送测试 ---------------- */
-    RS485_Init(115200); 
-
-    // 直接发 4 个十六进制数字：0x11, 0x22, 0x33, 0x44
-    uint8_t test_data[] = {0x11, 0x22, 0x33, 0x44};
-    
-    // 连发三次，确保你能看清
-    for(int i = 0; i < 3; i++) {
-        RS485_SendData(test_data, 4);
-        board_delay_ms(100); // 稍微延时一下
-    }
-    /* --------------------------------------------------- */
-
     board_init_ethercat(HPM_ESC); /* init ESC function pins */
     board_init_switch_led();      /* init switch and led for ECAT display */
     printf("EtherCAT IO sample\n");
@@ -46,6 +32,10 @@ int main(void)
     }
 
     MainInit(); /* SSC Initilize the stack */
+
+    /* ---------------- 485初始化 ---------------- */
+    RS485_Init(115200); 
+    /* ---------------- 485初始化 ---------------- */
 
 #if defined(ESC_EEPROM_EMULATION) && ESC_EEPROM_EMULATION
     pAPPL_EEPROM_Read  = ecat_eeprom_emulation_read;

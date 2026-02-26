@@ -2310,6 +2310,7 @@
         <group><name>application</name>
           <file><name>$PROJ_DIR$\..\..\application\digital_io.c</name></file>
           <file><name>$PROJ_DIR$\..\..\application\rs485_hal.c</name></file>
+          <file><name>$PROJ_DIR$\..\..\application\modbus_rtu.c</name></file>
         </group>
       </group>
       <group><name>port</name>

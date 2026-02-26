@@ -33,6 +33,7 @@ endif()
 
 sdk_src(application/digital_io.c)
 sdk_src(application/rs485_hal.c)
+sdk_src(application/modbus_rtu.c)
 sdk_inc(application)
 
 sdk_inc(.)

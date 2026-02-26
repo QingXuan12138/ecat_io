@@ -97,6 +97,9 @@
           <file file_name="../../application/rs485_hal.c">
             <configuration Name="Common" build_object_file_name="$(IntDir)/rs485_hal.c$(OBJ)" />
           </file>
+          <file file_name="../../application/modbus_rtu.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/modbus_rtu.c$(OBJ)" />
+          </file>
         </folder>
       </folder>
       <folder Name="port">

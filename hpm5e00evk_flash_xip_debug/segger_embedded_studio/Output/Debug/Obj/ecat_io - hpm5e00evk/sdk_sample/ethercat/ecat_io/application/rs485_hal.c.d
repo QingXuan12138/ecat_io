@@ -73,4 +73,11 @@ Output/Debug/Obj/ecat_io\ -\ hpm5e00evk/sdk_sample/ethercat/ecat_io/application/
  ../../../../../soc/HPM5E00/HPM5E31/hpm_trgmmux_src.h \
  ../../../../../soc/HPM5E00/HPM5E31/hpm_iomux.h \
  ../../../../../soc/HPM5E00/HPM5E31/hpm_clock_drv.h \
- ../../../../../soc/HPM5E00/HPM5E31/hpm_sysctl_drv.h
+ ../../../../../soc/HPM5E00/HPM5E31/hpm_sysctl_drv.h \
+ ../../../../../boards/hpm5e00evk/board.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ 8.26b/include/stdio.h \
+ ../../../../../boards/hpm5e00evk/pinmux.h \
+ ../../../../../drivers/inc/hpm_trgm_drv.h \
+ ../../../../../soc/HPM5E00/HPM5E31/hpm_trgmmux_src.h \
+ ../../../../../drivers/inc/hpm_gptmr_drv.h \
+ ../../../../../components/debug_console/hpm_debug_console.h

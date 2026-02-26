@@ -2,6 +2,7 @@
 #include "hpm_clock_drv.h"
 #include "hpm_interrupt.h"
 #include <string.h>
+#include "board.h"       
 
 /* 本地接收缓存 */
 static uint8_t  sg_rs485_rx_buf[RS485_RX_BUF_SIZE];
@@ -21,31 +22,31 @@ static void RS485_SetMode_RX(void)
     gpio_write_pin(RS485_CTRL_GPIO_CTRL, RS485_CTRL_GPIO_INDEX, RS485_CTRL_GPIO_PIN, 0);
 }
 
-/* 初始化函数 */
+//* 初始化函数 */
 void RS485_Init(uint32_t baudrate)
 {
-    /* 1. 配置 485 控制引脚 (PA22) 为输出 (ALT0: GPIO) */
+    /* 1. 使用官方的板级初始化，它会自动分配时钟并把 PC16/PC17 配为 UART4 
+          这步极大地防止了引脚被其他人抢走！*/
+    board_init_uart(RS485_UART); 
+
+    /* 2. 配置 485 方向控制引脚 (PA22) 为输出 */
     HPM_IOC->PAD[IOC_PAD_PA22].FUNC_CTL = IOC_PA22_FUNC_CTL_GPIO_A_22; 
-    gpio_set_pin_output(RS485_CTRL_GPIO_CTRL, RS485_CTRL_GPIO_INDEX, RS485_CTRL_GPIO_PIN); // 修改为 SDK 新版 API
-    RS485_SetMode_RX(); // 默认处于接收状态，防止总线冲突
+    gpio_set_pin_output(RS485_CTRL_GPIO_CTRL, RS485_CTRL_GPIO_INDEX, RS485_CTRL_GPIO_PIN); 
+    RS485_SetMode_RX(); // 默认处于接收状态
 
-    /* 2. 配置 UART 引脚复用 (PC16=TX, PC17=RX, 均为 ALT2) */
-    HPM_IOC->PAD[IOC_PAD_PC16].FUNC_CTL = IOC_PC16_FUNC_CTL_UART4_TXD; 
-    HPM_IOC->PAD[IOC_PAD_PC17].FUNC_CTL = IOC_PC17_FUNC_CTL_UART4_RXD;
-
-    /* 3. 配置 UART4 时钟源 */
-    clock_set_source_divider(RS485_UART_CLK_NAME, clk_src_osc24m, 1U); 
-    clock_add_to_group(RS485_UART_CLK_NAME, 0);
+    /* 3. 获取刚刚配置好的真实 UART 时钟频率 */
+    uint32_t freq = clock_get_frequency(RS485_UART_CLK_NAME);
 
     /* 4. 初始化 UART4 参数 */
     uart_config_t config;
     uart_default_config(RS485_UART, &config);
     config.baudrate = baudrate;
+    config.src_freq_in_hz = freq; // <---- 最致命的一行！告诉底层时钟是多少，波特率才准！
     config.fifo_enable = true;
     uart_init(RS485_UART, &config);
 
     /* 5. 使能接收中断 */
-    uart_enable_irq(RS485_UART, uart_intr_rx_data_avail_or_timeout); // 修改为 SDK 新版 API
+    uart_enable_irq(RS485_UART, uart_intr_rx_data_avail_or_timeout); 
     intc_m_enable_irq_with_priority(RS485_UART_IRQ, 2); 
 }
 
