@@ -477,6 +477,7 @@
                     <state>$PROJ_DIR$\../build_tmp/generated/include</state>
                     <state>$PROJ_DIR$\../../SSC/Src</state>
                     <state>$PROJ_DIR$\../../../port</state>
+                    <state>$PROJ_DIR$\../../application</state>
                     <state>$PROJ_DIR$\../..</state>
                 </option>
                 <option>
@@ -603,6 +604,7 @@
                     <state>$PROJ_DIR$\../build_tmp/generated/include</state>
                     <state>$PROJ_DIR$\../../SSC/Src</state>
                     <state>$PROJ_DIR$\../../../port</state>
+                    <state>$PROJ_DIR$\../../application</state>
                     <state>$PROJ_DIR$\../..</state>
                 </option>
                 <option>
@@ -1621,6 +1623,7 @@
                     <state>$PROJ_DIR$\../build_tmp/generated/include</state>
                     <state>$PROJ_DIR$\../../SSC/Src</state>
                     <state>$PROJ_DIR$\../../../port</state>
+                    <state>$PROJ_DIR$\../../application</state>
                     <state>$PROJ_DIR$\../..</state>
                 </option>
                 <option>
@@ -1747,6 +1750,7 @@
                     <state>$PROJ_DIR$\../build_tmp/generated/include</state>
                     <state>$PROJ_DIR$\../../SSC/Src</state>
                     <state>$PROJ_DIR$\../../../port</state>
+                    <state>$PROJ_DIR$\../../application</state>
                     <state>$PROJ_DIR$\../..</state>
                 </option>
                 <option>
@@ -2305,6 +2309,7 @@
         </group>
         <group><name>application</name>
           <file><name>$PROJ_DIR$\..\..\application\digital_io.c</name></file>
+          <file><name>$PROJ_DIR$\..\..\application\rs485_hal.c</name></file>
         </group>
       </group>
       <group><name>port</name>

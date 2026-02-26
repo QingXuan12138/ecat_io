@@ -32,6 +32,8 @@ sdk_src(../port/hpm_ecat_e2p_emulation.c)
 endif()
 
 sdk_src(application/digital_io.c)
+sdk_src(application/rs485_hal.c)
+sdk_inc(application)
 
 sdk_inc(.)
 sdk_app_src(ecat.c)

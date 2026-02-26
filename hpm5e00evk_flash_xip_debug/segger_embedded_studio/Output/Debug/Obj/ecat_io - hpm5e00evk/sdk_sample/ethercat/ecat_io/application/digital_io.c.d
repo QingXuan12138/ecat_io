@@ -96,4 +96,6 @@ Output/Debug/Obj/ecat_io\ -\ hpm5e00evk/sdk_sample/ethercat/ecat_io/application/
  ../../SSC/Src/objdef.h ../../SSC/Src/sdoserv.h ../../SSC/Src/ecatcoe.h \
  ../../SSC/Src/mailbox.h ../../SSC/Src/ecatappl.h \
  ../../SSC/Src/digital_io.h ../../SSC/Src/digital_ioObjects.h \
- ../../../../../drivers/inc/hpm_gpio_drv.h
+ ../../../../../drivers/inc/hpm_gpio_drv.h \
+ C:\sdk_env_v1.11.0\hpm_sdk\samples\ethercat\ecat_io\application\rs485_hal.h \
+ ../../../../../drivers/inc/hpm_uart_drv.h

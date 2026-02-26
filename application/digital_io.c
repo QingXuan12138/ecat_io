@@ -35,6 +35,8 @@
 // 添加下面这一行
 #include <stdio.h>
 
+#include "rs485_hal.h"
+
 
 UINT32 APPL_GetDipSw(void);
 void APPL_SetLed(UINT32 value);
@@ -272,7 +274,8 @@ void APPL_InputMapping(UINT16 *pData)
 */
 void APPL_OutputMapping(UINT16 *pData)
 {
-    MEMCPY(&NumOfEntries0x7010.OutputCounter, pData, SIZEOF(NumOfEntries0x7010.OutputCounter));
+    /* 把 0x7010 改成 0x7000 20260226 */
+    MEMCPY(&NumOfEntries0x7000.OutputCounter, pData, SIZEOF(NumOfEntries0x7000.OutputCounter));
 }
 
 /**
@@ -309,7 +312,8 @@ void APPL_Application(void)
 
     /* ---------------------- 处理输出 (Output) ---------------------- */
     /* 1. 获取主站发来的数据 */
-    UINT32 currentOutput = (UINT32)NumOfEntries0x7010.OutputCounter;
+  /* 把 0x7010 改成 0x7000 */
+    UINT32 currentOutput = (UINT32)NumOfEntries0x7000.OutputCounter;
 
     /* 2. 串口打印 (仅当数据变化时) */
     // 这里就是我们要验证的核心：主站改数，串口立马吐出来
@@ -320,6 +324,17 @@ void APPL_Application(void)
         
         /* 3. 执行硬件动作 (点灯) - 保留原有逻辑 */
         APPL_SetLed(currentOutput);
+    }
+
+    /* ---------------------- 3. 新增的 RS485 回环测试逻辑 ---------------------- */
+    uint8_t temp_buf[256];
+    // 读取底层的接收缓存
+    uint16_t rx_len = RS485_ReadData(temp_buf); 
+    
+    if (rx_len > 0) {
+        // 收到数据，打印并原封不动地发回去
+        printf("RS485 Received %d bytes\r\n", rx_len);
+        RS485_SendData(temp_buf, rx_len); 
     }
 }
 

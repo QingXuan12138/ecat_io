@@ -9,7 +9,7 @@
       arm_rtl_variant="SEGGER"
       arm_linker_no_warn_on_mismatch="Yes"
       build_generic_options_file_name=""
-      c_user_include_directories="../../../../../arch;../../../../../arch/riscv/l1c;../../../../../arch/riscv/intc;../../../../../boards/hpm5e00evk;../../../../../soc/HPM5E00/HPM5E31;../../../../../soc/HPM5E00/ip;../../../../../soc/HPM5E00/HPM5E31/toolchains;../../../../../soc/HPM5E00/HPM5E31/boot;../../../../../drivers/inc;../../../../../utils;../../../../../components/debug_console;../../../../../components/eeprom_emulation;../../../../../components/eeprom_emulation/port;../build_tmp/generated/include;../../SSC/Src;../../../port;../..;"
+      c_user_include_directories="../../../../../arch;../../../../../arch/riscv/l1c;../../../../../arch/riscv/intc;../../../../../boards/hpm5e00evk;../../../../../soc/HPM5E00/HPM5E31;../../../../../soc/HPM5E00/ip;../../../../../soc/HPM5E00/HPM5E31/toolchains;../../../../../soc/HPM5E00/HPM5E31/boot;../../../../../drivers/inc;../../../../../utils;../../../../../components/debug_console;../../../../../components/eeprom_emulation;../../../../../components/eeprom_emulation/port;../build_tmp/generated/include;../../SSC/Src;../../../port;../../application;../..;"
       link_linker_script_file="..\..\..\..\..\soc\HPM5E00\HPM5E31\toolchains\segger\flash_xip.icf"
       link_use_linker_script_file="Yes"
       linker_output_format="hex"
@@ -93,6 +93,9 @@
           <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/sdk_sample/ethercat/ecat_io/application"/>
           <file file_name="../../application/digital_io.c">
             <configuration Name="Common" build_object_file_name="$(IntDir)/digital_io.c$(OBJ)" />
+          </file>
+          <file file_name="../../application/rs485_hal.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/rs485_hal.c$(OBJ)" />
           </file>
         </folder>
       </folder>
