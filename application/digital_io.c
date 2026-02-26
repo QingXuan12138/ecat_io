@@ -32,6 +32,9 @@
 #include "ecat_config.h"
 #include "hpm_gpio_drv.h"
 
+// 添加下面这一行
+#include <stdio.h>
+
 
 UINT32 APPL_GetDipSw(void);
 void APPL_SetLed(UINT32 value);
@@ -258,7 +261,7 @@ UINT16 APPL_GenerateMapping(UINT16 *pInputSize, UINT16 *pOutputSize)
 */
 void APPL_InputMapping(UINT16 *pData)
 {
-    MEMCPY(pData, &InputCounter0x6000, SIZEOF(InputCounter0x6000));
+    MEMCPY(pData, &NumOfEntries0x6000.InputCounter, SIZEOF(NumOfEntries0x6000.InputCounter));
 }
 
 /**
@@ -269,17 +272,55 @@ void APPL_InputMapping(UINT16 *pData)
 */
 void APPL_OutputMapping(UINT16 *pData)
 {
-    MEMCPY(&OutputCounter0x7010, pData, SIZEOF(OutputCounter0x7010));
+    MEMCPY(&NumOfEntries0x7010.OutputCounter, pData, SIZEOF(NumOfEntries0x7010.OutputCounter));
 }
 
 /**
 \brief    This function will called from the synchronisation ISR
             or from the mainloop if no synchronisation is supported
 */
+/*
 void APPL_Application(void)
 {
     InputCounter0x6000 = APPL_GetDipSw();
     APPL_SetLed((UINT32)OutputCounter0x7010);
+}
+*/
+/* 定义静态变量用于记录旧值，防止串口刷屏 */
+static UINT32 u32LastOutput = 0xFFFFFFFF;
+static UINT32 u32LastInput = 0xFFFFFFFF;
+
+void APPL_Application(void)
+{
+    /* ---------------------- 处理输入 (Input) ---------------------- */
+    /* 1. 读取硬件IO状态 */
+    UINT32 currentInput = APPL_GetDipSw();
+    
+    /* 2. 赋值给 EtherCAT 变量 */
+    NumOfEntries0x6000.InputCounter = (UINT32)currentInput; 
+
+    /* 3. 串口打印 (仅当数据变化时) */
+    if (currentInput != u32LastInput)
+    {
+        u32LastInput = currentInput;
+        // 打印从板子上读到的输入值，也就是即将发给主站的值
+        printf(">> Input Changed (0x6000): 0x%X\r\n", NumOfEntries0x6000.InputCounter);
+    }
+
+    /* ---------------------- 处理输出 (Output) ---------------------- */
+    /* 1. 获取主站发来的数据 */
+    UINT32 currentOutput = (UINT32)NumOfEntries0x7010.OutputCounter;
+
+    /* 2. 串口打印 (仅当数据变化时) */
+    // 这里就是我们要验证的核心：主站改数，串口立马吐出来
+    if (currentOutput != u32LastOutput) 
+    {
+        u32LastOutput = currentOutput;
+        printf("<< Output Changed (0x7010): 0x%X\r\n", currentOutput);
+        
+        /* 3. 执行硬件动作 (点灯) - 保留原有逻辑 */
+        APPL_SetLed(currentOutput);
+    }
 }
 
 #if EXPLICIT_DEVICE_ID
