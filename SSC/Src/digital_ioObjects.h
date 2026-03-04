@@ -1174,7 +1174,7 @@ TOBJ8010;
 */
 PROTO TOBJ8010 Modbus_Config_Slave20x8010
 #if defined(_DIGITAL_IO_) && (_DIGITAL_IO_ == 1)
-={3,0x0002,0x00002580,0x0000}
+={3,0x0000,0x00002580,0x0000}
 #endif
 ;
 /** @}*/

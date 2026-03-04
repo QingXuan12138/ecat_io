@@ -2939,7 +2939,7 @@
 									<SubItem>
 										<Name>Station_ID</Name>
 										<Info>
-											<DefaultData>0200</DefaultData>
+											<DefaultData>0000</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
