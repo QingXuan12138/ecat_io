@@ -39,10 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/middleware/eclipse_threadx/cmake_install.cmake")
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/middleware/CMSIS/cmake_install.cmake")
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/middleware/ptpd/cmake_install.cmake")
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/middleware/wifi/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/middleware/eclipse_threadx/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/middleware/CMSIS/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/middleware/ptpd/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/middleware/wifi/cmake_install.cmake")
 
 endif()
 

@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/arch/cmake_install.cmake")
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/boards/cmake_install.cmake")
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/soc/cmake_install.cmake")
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/drivers/cmake_install.cmake")
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/utils/cmake_install.cmake")
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/components/cmake_install.cmake")
-  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/build_tmp/middleware/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/arch/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/boards/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/soc/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/drivers/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/utils/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/components/cmake_install.cmake")
+  include("C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/build_tmp/middleware/cmake_install.cmake")
 
 endif()
 

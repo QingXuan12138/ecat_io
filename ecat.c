@@ -15,7 +15,7 @@
 #include "hpm_ecat_hw.h"
 #include "hpm_l1c_drv.h"
 
-#include "rs485_hal.h"
+#include "gw_hal_rs485.h"
 
 int main(void)
 {
@@ -34,7 +34,7 @@ int main(void)
 
     MainInit(); /* SSC Initilize the stack */
 
-        /* ---------------- 485初始化 ---------------- */
+    /* ---------------- 485初始化 ---------------- */
     RS485_Init(9600); 
     /* ---------------- 485初始化 ---------------- */
 

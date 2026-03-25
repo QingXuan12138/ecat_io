@@ -1,0 +1,130 @@
+[0/1] Re-running CMake...
+-- Application: C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway
+-- Board: hpm5e00evk from c:\sdk_env_v1.11.0\hpm_sdk/boards
+-- Found toolchain: gnu (c:\sdk_env_v1.11.0\toolchains\rv32imac_zicsr_zifencei_multilib_b_ext-win)
+-- hpm_sdk: 1.11.0 (c:\sdk_env_v1.11.0\hpm_sdk)
+-- GNU ld linker script: C:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/toolchains/gcc/flash_xip.ld
+-- IAR linker script: C:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/toolchains/iar/flash_xip.icf
+-- IAR device name: HPM5E31xGNx
+-- IAR Embedded Workbench Project: C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/iar_embedded_workbench\ecat_rs485_gateway.ewp
+-- Segger linker script: C:/sdk_env_v1.11.0/hpm_sdk/soc/HPM5E00/HPM5E31/toolchains/segger/flash_xip.icf
+-- Segger device name: HPM5E31xGNx
+-- Segger openocd board config: $(ProjectDir)/../../../../../boards/openocd/boards/hpm5e00evk.cfg
+-- Segger Embedded Studio Project: C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/segger_embedded_studio/ecat_rs485_gateway.emProject
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug
+[1/71] Building C object build_tmp/CMakeFiles/hpm_sdk_gcc_startup_lib.dir/soc/HPM5E00/HPM5E31/toolchains/gcc/initfini.c.obj
+[2/71] Building ASM object build_tmp/CMakeFiles/hpm_sdk_gcc_startup_lib.dir/soc/HPM5E00/HPM5E31/toolchains/gcc/start.S.obj
+[3/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/ecat_rs485_gateway/application/gw_modbus_rtu.c.obj
+[4/71] Linking C static library lib\libhpm_sdk_gcc_startup_lib.a
+[5/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_pllctlv2_drv.c.obj
+[6/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_pwmv2_drv.c.obj
+[7/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_spi_drv.c.obj
+[8/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_acmp_drv.c.obj
+[9/71] Building C object build_tmp/CMakeFiles/hpm_sdk_gcc_lib.dir/soc/HPM5E00/HPM5E31/toolchains/trap.c.obj
+[10/71] Building C object build_tmp/CMakeFiles/hpm_sdk_gcc_lib.dir/soc/HPM5E00/HPM5E31/toolchains/reset.c.obj
+[11/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/port/hpm_ecat_phy.c.obj
+[12/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/port/hpm_ecat_e2p_emulation.c.obj
+[13/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/ecat_rs485_gateway/application/gw_hal_rs485.c.obj
+[14/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_gpio_drv.c.obj
+[15/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_usb_drv.c.obj
+[16/71] Linking C static library lib\libhpm_sdk_gcc_lib.a
+[17/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_gptmr_drv.c.obj
+[18/71] Building C object CMakeFiles/app.dir/ecat.c.obj
+[19/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/port/hpm_ecat_hw.c.obj
+[20/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_adc16_drv.c.obj
+[21/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/ecat_rs485_gateway/SSC/Src/objdef.c.obj
+[22/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_tsns_drv.c.obj
+[23/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/ecat_rs485_gateway/SSC/Src/sdoserv.c.obj
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/sdoserv.c: In function 'SdoUploadSegmentInd':
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/sdoserv.c:434:52: warning: overflow in conversion from 'int' to 'uint8_t' {aka 'unsigned char'} changes value from '(int)pSdoSegRes->SdoHeader.SegHeader & -256' to '0' [-Woverflow]
+  434 |                 pSdoSegRes->SdoHeader.SegHeader &= ~SEGHEADER_MASK;
+      |                                                    ^
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/sdoserv.c: In function 'SDOS_SdoInd':
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/sdoserv.c:661:83: warning: taking address of packed member of 'struct <anonymous>' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  661 |                                                         pData = (UINT16 MBXMEM *) ((TINITSDOUPLOADEXPRESMBX MBXMEM *) pSdoInd)->Data;
+      |                                                                                   ^
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/sdoserv.c:683:91: warning: taking address of packed member of 'struct <anonymous>' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  683 |                                                                 pData = (UINT16 MBXMEM *) ((TINITSDOUPLOADNORMRESMBX MBXMEM *) pSdoInd)->Data;
+      |                                                                                           ^
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/sdoserv.c:737:67: warning: taking address of packed member of 'struct <anonymous>' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  737 |                                         pData = (UINT16 MBXMEM *) ((TINITSDODOWNLOADNORMREQMBX MBXMEM *) pSdoInd)->Data;
+      |                                                                   ^
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/sdoserv.c:824:122: warning: overflow in conversion from 'int' to 'uint8_t' {aka 'unsigned char'} changes value from '(int)pSdoResStored->SdoHeader.Sdo[0] & -256' to '0' [-Woverflow]
+  824 |                                                                 pSdoResStored->SdoHeader.Sdo[SDOHEADER_COMMANDOFFSET] &= ~SDOHEADER_COMMANDMASK;
+      |                                                                                                                          ^
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/sdoserv.c:871:114: warning: overflow in conversion from 'int' to 'uint8_t' {aka 'unsigned char'} changes value from '(int)pSdoResStored->SdoHeader.Sdo[0] & -256' to '0' [-Woverflow]
+  871 |                                                         pSdoResStored->SdoHeader.Sdo[SDOHEADER_COMMANDOFFSET] &= ~SDOHEADER_COMMANDMASK;
+      |                                                                                                                  ^
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/sdoserv.c:896:114: warning: overflow in conversion from 'int' to 'uint8_t' {aka 'unsigned char'} changes value from '(int)pSdoResStored->SdoHeader.Sdo[0] & -256' to '0' [-Woverflow]
+  896 |                                                         pSdoResStored->SdoHeader.Sdo[SDOHEADER_COMMANDOFFSET] &= ~SDOHEADER_COMMANDMASK;
+      |                                                                                                                  ^
+[24/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_mchtmr_drv.c.obj
+[25/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_ptpc_drv.c.obj
+[26/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/soc/HPM5E00/HPM5E31/system.c.obj
+[27/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_pcfg_drv.c.obj
+[28/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/soc/HPM5E00/HPM5E31/hpm_qeiv2_soc_drv.c.obj
+[29/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_enet_drv.c.obj
+[30/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/arch/riscv/l1c/hpm_l1c_drv.c.obj
+[31/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/ecat_rs485_gateway/application/gw_application.c.obj
+[32/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/soc/HPM5E00/HPM5E31/boot/hpm_bootheader.c.obj
+[33/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/soc/HPM5E00/HPM5E31/hpm_sysctl_drv.c.obj
+[34/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/soc/HPM5E00/HPM5E31/hpm_otp_drv.c.obj
+[35/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/soc/HPM5E00/HPM5E31/hpm_pdgo_drv.c.obj
+[36/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/boards/hpm5e00evk/pinmux.c.obj
+[37/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/soc/HPM5E00/HPM5E31/hpm_clock_drv.c.obj
+[38/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/soc/HPM5E00/HPM5E31/hpm_trgm_soc_drv.c.obj
+[39/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/ecat_rs485_gateway/SSC/Src/ecatcoe.c.obj
+[40/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/boards/hpm5e00evk/board.c.obj
+[41/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_pmp_drv.c.obj
+[42/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_uart_drv.c.obj
+[43/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_enc_pos_drv.c.obj
+[44/71] Building ASM object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_tfa_drv.S.obj
+[45/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_qeov2_drv.c.obj
+[46/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_i2c_drv.c.obj
+[47/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/ecat_rs485_gateway/SSC/Src/coeappl.c.obj
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/coeappl.c: In function 'COE_ObjDictionaryInit':
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/coeappl.c:884:26: warning: the comparison will always evaluate as 'true' for the address of 'ApplicationObjDic' will never be NULL [-Waddress]
+  884 |     if(ApplicationObjDic != NULL)
+      |                          ^~
+In file included from C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/digital_io.h:41,
+                 from C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/coeappl.c:134:
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/digital_ioObjects.h:1234:19: note: 'ApplicationObjDic' declared here
+ 1234 | TOBJECT    OBJMEM ApplicationObjDic[] = {
+      |                   ^~~~~~~~~~~~~~~~~
+[48/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_esc_drv.c.obj
+[49/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_crc_drv.c.obj
+[50/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_sdm_drv.c.obj
+[51/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/ecat_rs485_gateway/SSC/Src/mailbox.c.obj
+[52/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_ppi_drv.c.obj
+[53/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_qeiv2_drv.c.obj
+[54/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/ecat_rs485_gateway/SSC/Src/ecatappl.c.obj
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/ecatappl.c: In function 'PDI_Isr':
+C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/SSC/Src/ecatappl.c:589:25: warning: variable 'SyncState' set but not used [-Wunused-but-set-variable]
+  589 |         volatile UINT32 SyncState = 0;
+      |                         ^~~~~~~~~
+[55/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/utils/hpm_crc32.c.obj
+[56/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/utils/hpm_ffssi.c.obj
+[57/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/utils/hpm_swap.c.obj
+[58/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/samples/ethercat/ecat_rs485_gateway/SSC/Src/ecatslv.c.obj
+[59/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/utils/hpm_sbrk.c.obj
+[60/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_plb_drv.c.obj
+[61/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_dmav2_drv.c.obj
+[62/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_lobs_drv.c.obj
+[63/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_owr_drv.c.obj
+[64/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_ewdg_drv.c.obj
+[65/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_mcan_drv.c.obj
+[66/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/drivers/src/hpm_eui_drv.c.obj
+[67/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/components/debug_console/hpm_debug_console.c.obj
+[68/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/components/eeprom_emulation/port/hpm_nor_flash.c.obj
+[69/71] Building C object build_tmp/CMakeFiles/hpm_sdk_lib.dir/components/eeprom_emulation/eeprom_emulation.c.obj
+[70/71] Linking C static library lib\libhpm_sdk_lib.a
+[71/71] Linking C executable output\demo.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      123680 B         1 MB     11.80%
+             ILM:        8600 B       128 KB      6.56%
+             DLM:         32 KB       128 KB     25.00%
+        AXI_SRAM:       38800 B       192 KB     19.73%
+AXI_SRAM_NONCACHEABLE:          0 GB        64 KB      0.00%
+        AHB_SRAM:          0 GB        32 KB      0.00%

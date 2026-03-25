@@ -13,7 +13,7 @@ endif()
 
 find_package(hpm-sdk REQUIRED HINTS $ENV{HPM_SDK_BASE})
 
-project(ecat_io)
+project(ecat_rs485_gateway)
 
 sdk_inc(SSC/Src)
 sdk_src(SSC/Src/coeappl.c)
@@ -31,9 +31,9 @@ if(CONFIG_EEPROM_EMULATION)
 sdk_src(../port/hpm_ecat_e2p_emulation.c)
 endif()
 
-sdk_src(application/digital_io.c)
-sdk_src(application/rs485_hal.c)
-sdk_src(application/modbus_rtu.c)
+sdk_src(application/gw_application.c)
+sdk_src(application/gw_hal_rs485.c)
+sdk_src(application/gw_modbus_rtu.c)
 sdk_inc(application)
 
 sdk_inc(.)

@@ -11,7 +11,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/CMakeFiles/3.24.0/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/CMakeFiles/3.24.0/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: C:/sdk_env_v1.11.0/toolchains/rv32imac_zicsr_zifencei_multilib_b_ext-win/bin/riscv32-unknown-elf-g++.exe 
@@ -24,7 +24,7 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_io/hpm5e00evk_flash_xip_debug/CMakeFiles/3.24.0/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "C:/sdk_env_v1.11.0/hpm_sdk/samples/ethercat/ecat_rs485_gateway/hpm5e00evk_flash_xip_debug/CMakeFiles/3.24.0/CompilerIdCXX/a.out"
 
 Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
 riscv32-unknown-elf-gcc.exe (gc891d8dc23e) 13.2.0
